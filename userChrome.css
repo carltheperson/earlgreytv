@@ -1,0 +1,15 @@
+/* https://support.mozilla.org/en-US/questions/1324666 */
+#fullscr-toggler {
+  display: none !important;
+}
+
+/* https://support.mozilla.org/fy-NL/questions/1323490 */
+/* hide 'overlink' messages */
+#statuspanel[type="overLink"] {
+  opacity: 0 !important;
+}
+
+/* hide all status messages */
+#statuspanel {
+  opacity: 0 !important;
+}

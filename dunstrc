@@ -1,0 +1,38 @@
+# dunstify -u low -h int:value:"12" "Volume: 19" -r 1
+[global]
+    width = (0, 1500)
+    height = 950
+    origin = top-right
+    offset = 30x30
+    progress_bar = true
+    progress_bar_height = 36
+    progress_bar_frame_width = 4
+    progress_bar_width = 600
+    separator_height = 4
+    padding = 10
+    horizontal_padding = 30
+    frame_width = 6
+    gap_size = 0
+    idle_threshold = 30
+    font = Monospace 24
+    line_height = 20
+    markup = full
+    format = "<b>%s</b>\n%b\n"
+    alignment = left
+    vertical_alignment = center
+    word_wrap = no
+    ellipsize = end
+    ignore_newline = no
+    show_indicators = yes
+    icon_position = right
+    corner_radius = 6
+    max_icon_size = 160
+
+
+[urgency_low]
+    background = "#ffffff"
+    foreground = "#2E3440"
+    frame_color = "#444444"
+    highlight = "#444444"
+    timeout = 2
+    icon = /home/rc/sync/projects/earlgreytv/images/logo.png
