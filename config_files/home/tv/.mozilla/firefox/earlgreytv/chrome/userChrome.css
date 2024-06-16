@@ -13,3 +13,8 @@
 #statuspanel {
   opacity: 0 !important;
 }
+
+/* disable fullscreen transition */
+#navigator-toolbox[fullscreenShouldAnimate] {
+  transition: none !important;
+}

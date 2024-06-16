@@ -136,6 +136,12 @@ For the homepage, pick "Custom URLS...". Then set it to `file:///home/tv/earlgre
 
 ![home page settings](images/homepage.png)
 
+### Enable stylesheets
+
+Navigate to `about:config`, and set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`.
+
+![stylesheets option](images/stylesheets.png)
+
 
 ## Sync configs
 

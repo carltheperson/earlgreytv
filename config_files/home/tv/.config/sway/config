@@ -32,10 +32,9 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% && du
 
 # Controls for the Airmouse
 bindsym Menu exec wtype -M alt -P home -m alt -p home
-bindsym Up exec xdotool click 4
+bindsym Up exec xdotool click 4 # Not all sites support scroll with arrow keys. This scrolls
 bindsym Down exec xdotool click 5
 bindsym Left exec ydotool mousemove 1000 500 # This is the middle of the screen for me
-# bindsym XF86VoiceCommand exec echo 'standby 0' | cec-client -s -d 1 && sleep 2 && systemctl suspend
 bindsym XF86VoiceCommand exec /home/tv/.config/before_suspend.sh && systemctl suspend
 
 # Run on startup
