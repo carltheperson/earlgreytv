@@ -1,4 +1,3 @@
-# dunstify -u low -h int:value:"12" "Volume: 19" -r 1
 [global]
     width = (0, 1500)
     height = 950
@@ -35,4 +34,4 @@
     frame_color = "#444444"
     highlight = "#444444"
     timeout = 2
-    icon = /home/rc/sync/projects/earlgreytv/images/logo.png
+    icon = /home/tv/earlgreytv/images/logo.png

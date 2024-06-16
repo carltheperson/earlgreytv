@@ -106,7 +106,17 @@ swaymsg reload
 
 ## Firefox manual settings
 
-**Create profile:**
+### Set zoom
+
+You likely need some extra zoom on the website you visit. How much depends on how big your screen is. 200% looks good on my TV.
+
+Navigate to `about:preferences`.
+
+Set "Default zoom" to 200%.
+
+![Zoom](images/zoom.png)
+
+### Create profile
 
 The profile is used for a predictable path to place a config file.
 
@@ -118,7 +128,7 @@ Make sure to click "Choose Folder..." and set it to `/home/tv/.mozilla/firefox/e
 
 "Default Profile" should be set to "yes"
 
-**Set homepage:**
+### Set homepage
 
 Navigate to `about:preferences#home`.
 
@@ -126,9 +136,10 @@ For the homepage, pick "Custom URLS...". Then set it to `file:///home/tv/earlgre
 
 ![home page settings](images/homepage.png)
 
+
 ## Sync configs
 
-You should be able to run `./sync.sh` in this directory to sync files needed for the EarlgreyTV setup.
+Run `./sync.sh` in this directory, to sync files needed for the EarlgreyTV setup.
 
 ```sh
 # Make sure you have rsync
@@ -137,5 +148,11 @@ sudo apt install rsync -y
 ./sync.sh
 ```
 
-## Reload configs
+## Apply configs
+
+Run `./apply.sh` to restart any services that uses config files. Doesn't restart Firefox.
+
+```sh
+./apply.sh
+```
 

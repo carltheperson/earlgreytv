@@ -1,0 +1,10 @@
+[Unit]
+Description=On Resume
+After=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/tv/.config/after_suspend.sh
+
+[Install]
+WantedBy=suspend.target
