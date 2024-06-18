@@ -142,6 +142,14 @@ Navigate to `about:config`, and set `toolkit.legacyUserProfileCustomizations.sty
 
 ![stylesheets option](images/stylesheets.png)
 
+### Enable activity cursor
+
+This will indicate on the cursor if the page is loading.
+
+Navigate to `about:config`, and set `ui.use_activity_cursor` to `true`.
+
+![activity cursor](images/activity_cursor.png)
+
 
 ## Sync configs
 

@@ -1,0 +1,9 @@
+[Unit]
+Description=Run casting server
+
+[Service]
+ExecStart=/home/tv/casting_server.py
+Restart=always
+
+[Install]
+WantedBy=default.target

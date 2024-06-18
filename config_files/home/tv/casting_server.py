@@ -1,14 +1,17 @@
-from http.server import SimpleHTTPRequestHandler, HTTPServer
-from urllib.parse import urlparse, parse_qs
-import hashlib
-import uuid
-import subprocess as sp
-import base64
+#!/usr/bin/python3
 
-# Token based on MAC address
-mac = ''.join(['{:02x}'.format((uuid.getnode() >> elements) & 0xff) for elements in range(0,2*6,2)][::-1])
-token = hashlib.sha256(mac.encode()).hexdigest()[0:18]
-print("Token client should know", token)
+from http.server import SimpleHTTPRequestHandler, HTTPServer
+import hashlib
+import subprocess as sp
+import os
+
+env = os.environ.copy()
+env["WAYLAND_DISPLAY"] = "wayland-1"
+
+with open('/etc/machine-id', 'r') as file:
+    machine_id = file.read().strip()
+token = hashlib.sha256(machine_id.encode()).hexdigest()
+print("Token for checksum:", token)
 
 def clean_url(url):
   # I want no funny business in my URLs
@@ -23,18 +26,28 @@ def clean_url(url):
 
 class CastingHandler(SimpleHTTPRequestHandler):
   def do_GET(self):
-    parsed_path = urlparse(self.path)
-    query_params = parse_qs(parsed_path.query)
-    url = query_params["url"][0]
-    token_ = query_params["t"][0]
-    if token_ != token:
-       self.send_response(400)
-       return
+    checksum = self.path[1: (64 + 1)]
+    url = self.path[(64 + 1):]
+
+    expected_checksum = hashlib.sha256((token + url).encode()).hexdigest()
+    if checksum != expected_checksum:
+        self.send_response(400)
+        return
     url = clean_url(url) 
 
-    url_b64 = base64.b64encode(url.encode()).decode('utf-8')
-    command = f'wtype -M ctrl -P l -m ctrl -p l -s 100 "$(echo \'{url_b64}\' | base64 -d)" -k KP_Enter -s 2000 -k Escape'
-    result = sp.run(command, shell=True, check=True, text=True)
+    command = [
+        'wtype',
+        '-M', 'ctrl',
+        '-P', 'l',
+        '-m', 'ctrl',
+        '-p', 'l',
+        '-s', '100',
+        url,
+        '-k', 'KP_Enter',
+        '-s', '2000',
+        '-k', 'Escape'
+    ]
+    sp.run(command, check=True, text=True, env=env)
 
     self.send_response(200)
     self.send_header('Content-type', 'text/plain') 
