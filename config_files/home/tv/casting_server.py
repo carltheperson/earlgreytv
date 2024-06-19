@@ -41,10 +41,16 @@ class CastingHandler(SimpleHTTPRequestHandler):
         '-P', 'l',
         '-m', 'ctrl',
         '-p', 'l',
-        '-s', '100',
+        '-s', '1000',
+        '-M', 'ctrl',
+        '-P', 'l',
+        '-m', 'ctrl',
+        '-p', 'l',
+        '-s', '1000',
         url,
+        '-s', '1000',
         '-k', 'KP_Enter',
-        '-s', '2000',
+        '-s', '2500',
         '-k', 'Escape'
     ]
     sp.run(command, check=True, text=True, env=env)
