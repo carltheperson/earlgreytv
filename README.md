@@ -7,6 +7,7 @@
 
 <br/>
 
+Summary: I use a Linux-running laptop (which I spilt tea on), to render a browser in constant fullscreen. I then have a homepage with a SmartTV-like look. The "apps" are simply links to websites.
 
 Warning: This is mostly a collection of my notes. I haven't tested if these steps work perfectly on a fresh install. You should be able to debug things yourself if anything goes wrong.
 
@@ -206,7 +207,8 @@ Run `./apply.sh` to restart any services that uses config files. Doesn't restart
 
 ## Further notes
 
-I ran into some issues with `ydotool`. This [solution](https://github.com/ReimuNotMoe/ydotool/issues/25#issuecomment-535842993) helped.
+- I ran into some issues with `ydotool`. This [solution](https://github.com/ReimuNotMoe/ydotool/issues/25#issuecomment-535842993) helped.
+- Your TV screen might not be primary on the initial Debian login screen. [This](https://askubuntu.com/a/1467005) can correct that.
 
 # Thanks to
 
