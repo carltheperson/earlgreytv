@@ -1,8 +1,12 @@
-# EarlgreyTV
+<h1 align="center">EarlGreyTV</h1>
+<p align="center">This repository explains how I run my SmartTV setup EarlGreyTV.</p>
 
-This is ...
+<div align="center">
+		[picture]
+</div>
 
-[picture]
+<br/>
+
 
 Warning: This is mostly a collection of my notes. I haven't tested if these steps work perfectly on a fresh install. You should be able to debug things yourself if anything goes wrong.
 
