@@ -20,14 +20,14 @@
       { name: "DR TV", url: "https://www.dr.dk/drtv/", image: "drtv.svg" },
       { name: "DR TV\n(Nyheder)", url: "https://www.dr.dk/drtv/kategorier/nyhederogdebat", image: "drtv.svg", shortcut: true },
       { name: "DR Lyd", url: "https://www.dr.dk/lyd", image: "drlyd.svg" },
-      { name: "Cataas", url: "https://cataas.com/cat", image: "cataas.png" },
+      { name: "Max", url: "https://play.max.com", image: "max.png" },
       { name: "Watch list", url: "file:///home/tv", image: "watchlist.svg" },
       { name: "Offline media", url: "file:///home/tv", image: "folder.svg" },
       { name: "Hacker News", url: "https://news.ycombinator.com/", image: "hn.png" },
       { name: "YouTube", url: "https://youtube.com", image: "yt.png" },
-      { name: "HBO Max", url: "https://play.hbomax.com/page/urn:hbo:page:home", image: "hbomax.png" },
       { name: "Netflix", url: "https://netflix.com", image: "netflix.jpg" },
       { name: "Weather", url: "https://wttr.in/", image: "wttrin.png" },
+      { name: "Random cat", url: "https://cataas.com/cat", image: "cataas.png" },
     ];
 
     const appsArea = document.querySelector(".apps");
@@ -140,6 +140,16 @@
       filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.6));
     }
 
+    .app p {
+      color: black;
+      font-weight: bold;
+      font-size: 1.75rem;
+      margin: 0;
+      text-align: center;
+    }
+
+    /* Special app CSS */
+
     .drtv img,
     .drlyd img {
       filter: saturate(75%) sepia(20%) brightness(110%);
@@ -152,17 +162,13 @@
       filter: saturate(75%) sepia(20%) brightness(110%);
     }
 
-    .hbomax img {
-      filter: saturate(50%) sepia(20%) brightness(90%);
+    .max img {
+      filter: saturate(65%) sepia(20%) brightness(120%);
     }
 
-
-    .app p {
-      color: black;
-      font-weight: bold;
-      font-size: 1.75rem;
-      margin: 0;
-      text-align: center;
+    .cataas img {
+      /* this cat is a bit intense */
+      opacity: 0.9;
     }
   </style>
 </body>

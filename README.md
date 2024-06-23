@@ -8,6 +8,10 @@ Warning: This is mostly a collection of my notes. I haven't tested if these step
 
 I encourage you to customize this as much as possible. Please make it *your* perfect setup, not mine.
 
+# Configuring and running locally
+
+
+
 # Hardware setup notes
 
 ## TV
@@ -92,7 +96,7 @@ The next steps depend on an SSH connection to your TV. I recommend adding your T
 ssh tv
 ```
 
-**Preforming Sway commands over SSH:**
+**Tip: preforming Sway commands over SSH:**
 
 Interacting with Sway over SSH might give you an error like this: `swaymsg/main.c:419] Unable to retrieve socket path`
 
@@ -170,3 +174,4 @@ Run `./apply.sh` to restart any services that uses config files. Doesn't restart
 ./apply.sh
 ```
 
+# Thank you to

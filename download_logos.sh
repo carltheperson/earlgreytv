@@ -1,1 +1,1 @@
-while IFS=' ' read -r name url || [ -n "$name" ]; do curl -o "config_files/home/tv/earlgreytv/images/${name}" "${url}"; done < images.txt
+while IFS=' ' read -r name url || [ -n "$name" ]; do curl -o "config_files/home/tv/earlgreytv/images/${name}" "${url}"; done < logos.txt

@@ -1,4 +1,4 @@
 yt.png https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png
-hbomax.png https://hbomax-images.warnermediacdn.com/2020-05/square%20social%20logo%20400%20x%20400_0.png
+max.png https://play-lh.googleusercontent.com/VODqBhdZXQIkQlcv_A2nAq1gPNO7fwfDlUO3UZcgcMy6jAVx05CSU-vFuVFsr9gFUuo=w240-h480
 netflix.jpg https://media1.popsugar-assets.com/files/thumbor/vrEDAyWceXXFdGYA_5jmRwsIZpk=/2500x2500/filters:format_auto():quality(85):extract_cover()/2019/02/01/911/n/1922283/94a9fe8d5c54b1a22eaf19.91477690_.jpg
 hn.png https://cdn2.iconfinder.com/data/icons/social-flat-buttons-3/512/hacker_news-512.png
