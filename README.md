@@ -4,13 +4,39 @@ This is ...
 
 [picture]
 
-Warning: This is mostly a collection of my notes. I haven't tested if these steps work perfectly on a fresh install. Be able to debug things yourself if anything goes wrong.
+Warning: This is mostly a collection of my notes. I haven't tested if these steps work perfectly on a fresh install. You should be able to debug things yourself if anything goes wrong.
 
 I encourage you to customize this as much as possible. Please make it *your* perfect setup, not mine.
 
 # Configuring and running locally
 
+The main "homepage" of EarlGreyTV is the `earlgreytv.html` file found in `config_files/home/tv/earlgreytv/`. This is where you tweak the homepage appearance and, importantly, configure the "apps".
 
+In this repo, I have my own example with my apps. Maybe I'm paranoid, but I'm too scared of Copyright, to have logo files hosted here. I made this script, so you can download them yourself:
+
+```sh
+# Download the logos in the logos.txt file
+# E.g Netflix logo
+./download_logos.sh
+```
+
+Now you should be able to open the HTML file in a browser. E.g.:
+
+```
+firefox config_files/home/tv/earlgreytv/earlgreytv.html
+```
+
+## Adding your own apps
+
+The apps are defined in the JavaScript portion of the `earlgreytv.html` file. Specify your app name, URL, and logo (should exist in the `images/` folder).
+
+```js
+const APPS = [
+  { name: "App name", url: "https://example.org", image: "app.png" },
+  /* ... */
+]
+```
+Tip: You can add a shortcut icon in the top-right corner by specifying `shortcut: true`.
 
 # Hardware setup notes
 
@@ -70,7 +96,7 @@ I went with [Debian Linux](https://www.debian.org/). I named my user `tv`.
 
 I chose [Sway](https://swaywm.org/). I needed something I could easily configure with a config file, and would be highly minimal.
 
-In retrospect, maybe regular [i3](https://i3wm.org/) would have been better. The automation tools that exist for the (X Window System)[https://en.wikipedia.org/wiki/X_Window_System] are more documented.
+In retrospect, maybe regular [i3](https://i3wm.org/) would have been better. The automation tools that exist for the [X Window System](https://en.wikipedia.org/wiki/X_Window_System) are more documented.
 
 Run:
 
@@ -96,7 +122,7 @@ The next steps depend on an SSH connection to your TV. I recommend adding your T
 ssh tv
 ```
 
-**Tip: preforming Sway commands over SSH:**
+**Tip: Sway commands over SSH:**
 
 Interacting with Sway over SSH might give you an error like this: `swaymsg/main.c:419] Unable to retrieve socket path`
 
@@ -174,4 +200,21 @@ Run `./apply.sh` to restart any services that uses config files. Doesn't restart
 ./apply.sh
 ```
 
-# Thank you to
+## Further notes
+
+I ran into some issues with `ydotool`. This [solution](https://github.com/ReimuNotMoe/ydotool/issues/25#issuecomment-535842993) helped.
+
+# Thanks to
+
+- Cup drawing logo: [BorogoveLM](https://www.deviantart.com/borogovelm/gallery), https://www.deviantart.com/borogovelm/art/Not-My-Cup-Of-Tea-297646401
+- Background drawing: [Rebecca](https://krita-artists.org/u/rebecca/summary), https://krita-artists.org/t/drawing-with-water-soluble-ink/3069
+- Web SVG icon by HASTA ICON from <a href="https://thenounproject.com/browse/icons/term/web/" target="_blank" title="web Icons">Noun Project</a> (CC BY 3.0)
+- Folder SVG icon by Waldiz Production from <a href="https://thenounproject.com/browse/icons/term/folder/" target="_blank" title="Folder Icons">Noun Project</a> (CC BY 3.0) 
+- Document SVG icon by Adiyogi from <a href="https://thenounproject.com/browse/icons/term/document/" target="_blank" title="Document Icons">Noun Project</a> (CC BY 3.0)
+- Send/shortcut SVG icon by HideMaru from <a href="https://thenounproject.com/browse/icons/term/send/" target="_blank" title="send Icons">Noun Project</a> (CC BY 3.0)
+- [Kevin Balicot](https://github.com/kevinbalicot) for making https://cataas.com (used as example "app")
+- [Igor Chubin](https://github.com/chubin) for making https://wttr.in (used as example "app")
+
+# License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
