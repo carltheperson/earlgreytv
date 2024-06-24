@@ -205,6 +205,17 @@ Run `./apply.sh` to restart any services that uses config files. Doesn't restart
 ./apply.sh
 ```
 
+## Casting via iPhone shortcut
+
+EarlGreyTV implements a very simple casting mechanism. A server will recieve a URL from an HTTP request, and past it into the Firefox address bar. The script for the casting server can be found here `config_files/home/tv/casting_server.py`.
+
+To make calls to the casting server easily from my iPhone, I created a shortcut that shows up in the Sharing Sheet, when sharing a link from any app.
+
+If you want to re-create the shortcut yourself, you can refer to these screenshots:
+
+![Casting shortcut](images/casting_server.png)
+
+
 ## Further notes
 
 - I ran into some issues with `ydotool`. This [solution](https://github.com/ReimuNotMoe/ydotool/issues/25#issuecomment-535842993) helped.
