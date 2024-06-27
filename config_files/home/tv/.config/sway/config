@@ -39,5 +39,5 @@ bindsym XF86VoiceCommand exec /home/tv/.config/before_suspend.sh && systemctl su
 
 # Run on startup
 exec dunstify -u low "Starting system" -r 1 && sleep 5 && dunstctl close-all
-exec sleep 5 && swaymsg workspace number 1 && firefox -url file://$HOME/sync/projects/earlgreytv/earlgreytv.html & sleep 1 && xdotool search --sync --onlyvisible --class "Firefox" windowactivate key F11
+exec sleep 5 && swaymsg workspace number 1 && firefox -url file:///home/tv/earlgreytv/earlgreytv.html & sleep 1 && xdotool search --sync --onlyvisible --class "Firefox" windowactivate key F11
 exec systemctl --user daemon-reload && systemctl --user enable dunst.service wakeup.service && systemctl --user restart wakeup.service dunst.service
