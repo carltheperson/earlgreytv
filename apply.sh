@@ -7,4 +7,4 @@ systemctl --user enable dunst.service casting.service
 systemctl --user restart dunst.service casting.service
 EOF
 
-ssh tv -t "sudo systemctl link /home/tv/.config/systemd/system/after-suspend.service; sudo systemctl daemon-reload; sudo systemctl enable after-suspend"
+ssh tv -t "su -c 'systemctl link /home/tv/.config/systemd/system/after-suspend.service; systemctl daemon-reload; systemctl enable after-suspend'"
