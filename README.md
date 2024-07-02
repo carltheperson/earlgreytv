@@ -2,7 +2,7 @@
 <p align="center">This repository explains how I run my smart TV setup EarlGreyTV.</p>
 
 <div align="center">
-		[picture]
+		<img alt="TV" src="images/front.png">
 </div>
 
 <br/>
@@ -70,12 +70,15 @@ You need a computer to power your setup. An old used laptop is perfect.
 
 I used a 5-year-old Lenovo laptop with a broken keyboard (because I spilled Earl Grey tea into it).
 
+![Back of TV with computer](images/back.png)
+
 ## Remote
 
 Since this setup is a regular desktop setup disguised as a smart TV, you need something to be your mouse. You also need a keyboard too (although maybe you can trigger an on-screen keyboard).
 
 I chose the `WECHIP W3 2.4G 3-i-1 2.4G Air Mouse`. It uses a small gyroscope as input for the mouse and has a small keyboard on the back. It's good but a bit flimsy.
 
+![Remote front and back](images/remote.png)
 
 ## Optional Extras
 
@@ -84,6 +87,8 @@ I chose the `WECHIP W3 2.4G 3-i-1 2.4G Air Mouse`. It uses a small gyroscope as 
 I use [CEC](https://en.wikipedia.org/wiki/Consumer_Electronics_Control) to allow my computer to suspend my TV. I need an adapter because the laptop doesn't support the CEC protocol itself.
 
 I use the `Pulse Eight USB-CEC Adapter`.
+
+![CEC adapter](images/cec.png)
 
 ### USB Extender
 
@@ -213,7 +218,7 @@ To make calls to the casting server easily from my iPhone, I created a shortcut 
 
 If you want to recreate the shortcut yourself, you can refer to these screenshots:
 
-![Casting shortcut](images/casting_server.png)
+![Casting shortcut](images/casting.png)
 
 
 ## Further Notes
