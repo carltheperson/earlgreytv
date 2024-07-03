@@ -7,14 +7,15 @@
 
 <br/>
 
+> [!TIP]
+> I wrote a [blog post](https://carltheperson.com/posts/earlgreytv) about this too. And recorded a quick [YouTube video](https://www.youtube.com/watch?v=836VlTPxnFc).
+
 Summary: I use a Linux-running laptop (which I spilled tea on) to render a browser in constant fullscreen. I then have a homepage with a smart TV-like look. The "apps" are simply links to websites.
 
 Warning: This is mostly a collection of my notes. I haven't tested if these steps work perfectly on a fresh install. You should be able to debug things yourself if anything goes wrong.
 
 I encourage you to customize this as much as possible. Please make it *your* perfect setup, not mine.
 
-> [!TIP]
-> I wrote a [blog post](https://carltheperson.com/posts/earlgreytv) about this too. And recorded a quick [YouTube video](https://www.youtube.com/watch?v=836VlTPxnFc).
 
 # Configuring and Running Locally
 
