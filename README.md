@@ -13,6 +13,9 @@ Warning: This is mostly a collection of my notes. I haven't tested if these step
 
 I encourage you to customize this as much as possible. Please make it *your* perfect setup, not mine.
 
+> [!TIP]
+> I wrote a [blog post](https://carltheperson.com/posts/earlgreytv) about this too. And recorded a quick [YouTube video](https://www.youtube.com/watch?v=836VlTPxnFc).
+
 # Configuring and Running Locally
 
 The main "homepage" of EarlGreyTV is the `earlgreytv.html` file found in `config_files/home/tv/earlgreytv/`. This is where you tweak the homepage appearance and, importantly, configure the "apps".
